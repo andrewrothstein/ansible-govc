@@ -7,4 +7,3 @@ govc_ver_gz: '{{ govc_ver_exe }}.{{ govc_compression_type }}'
 govc_install_exe: '{{ govc_install_dir }}/{{ govc_ver_exe }}'
 govc_link_exe: '{{ govc_install_dir }}/govc'
 govc_checksum: '{{ govc_checksums[govc_ver][govc_platform] }}'
-
