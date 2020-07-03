@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/vmware/govmomi/releases/download
 
