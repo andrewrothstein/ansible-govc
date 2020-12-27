@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: look for install
+- name: look for installed executable at {{ govc_install_exe }}
   become: yes
   stat:
     path: '{{ govc_install_exe }}'
@@ -17,7 +17,7 @@
   register: govc_binary
 - when: not govc_binary.stat.exists
   block:
-    - name: download
+    - name: downloading {{ govc_url }}
       become: yes
       become_user: root
       get_url:
@@ -25,20 +25,20 @@
         dest: '{{ govc_install_dir }}/{{ govc_ver_gz }}'
         checksum: '{{ govc_checksum }}'
         mode: 0644
-    - name: gunzip
+    - name: gunzipping {{ govc_ver_gz }} in {{ govc_install_dir }}
       become: yes
       become_user: root
       command: 'gunzip {{ govc_ver_gz }}'
       args:
         chdir: '{{ govc_install_dir }}'
         creates: '{{ govc_install_exe }}'
-    - name: make executable
+    - name: chmod 0755 {{ govc_install_exe }}
       become: yes
       become_user: root
       file:
         path: '{{ govc_install_exe }}'
         mode: 0755
-- name: link
+- name: linking {{ govc_link_exe }} to {{ govc_install_exe }}
   become: yes
   become_user: root
   file:
