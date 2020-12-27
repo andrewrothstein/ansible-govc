@@ -1,6 +1,6 @@
 ---
 # defaults file for govc
-govc_ver: v0.23.0
+govc_ver: v0.24.0
 govc_mirror: https://github.com/vmware/govmomi/releases/download
 govc_os: linux
 govc_arch: amd64
@@ -75,3 +75,12 @@ govc_checksums:
     windows_386: sha256:c5b796ade3a0c9b874b9bb6811339166fba1f6fe42af18b535a43821722adf0c
     # https://github.com/vmware/govmomi/releases/download/v0.23.0/govc_windows_amd64.exe.zip
     windows_amd64: sha256:635aa2fb3f74e19b76273845ca1699c9f1cc5f48625df8a44171709dd77bd5ab
+  v0.24.0:
+    # https://github.com/vmware/govmomi/releases/download/v0.24.0/govc_darwin_amd64.gz
+    darwin_amd64: sha256:ca90e1192fe79b900071d019cdfbc3749a9ff0335883fcc6fe8eee728150eeeb
+    # https://github.com/vmware/govmomi/releases/download/v0.24.0/govc_freebsd_amd64.gz
+    freebsd_amd64: sha256:51634a496abb3fd0e5ab8c4e23abdfb5738ad7a832d5e109e61c14fa1d22ef64
+    # https://github.com/vmware/govmomi/releases/download/v0.24.0/govc_linux_amd64.gz
+    linux_amd64: sha256:faf409c1ecbb23fb4a4a6d2df9092e047b94ed14d8a55768e23957388c6a2117
+    # https://github.com/vmware/govmomi/releases/download/v0.24.0/govc_windows_amd64.exe.zip
+    windows_amd64: sha256:147733fa0dedf65fdf3d598682e9797e28c9edb64d9c16cf5f4747ae4f4602c2

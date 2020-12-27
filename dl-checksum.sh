@@ -24,14 +24,10 @@ dl() {
 dl_ver() {
     local ver=$1
     printf "  %s:\n" $ver
-    dl $ver darwin 386 gz
     dl $ver darwin amd64 gz
-    dl $ver freebsd 386 gz
     dl $ver freebsd amd64 gz
-    dl $ver linux 386 gz
     dl $ver linux amd64 gz
-    dl $ver windows 386 exe.zip
     dl $ver windows amd64 exe.zip
 }
 
-dl_ver ${1:-v0.23.0}
+dl_ver ${1:-v0.24.0}
