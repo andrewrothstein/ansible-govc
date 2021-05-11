@@ -1,9 +1,10 @@
 ---
 # vars file for govc
 govc_platform: '{{ govc_os }}_{{ govc_arch }}'
-govc_url: '{{ govc_mirror }}/{{ govc_ver }}/govc_{{ govc_platform }}.{{ govc_compression_type }}'
-govc_ver_exe: govc_{{ govc_ver }}_{{ govc_platform }}
-govc_ver_gz: '{{ govc_ver_exe }}.{{ govc_compression_type }}'
-govc_install_exe: '{{ govc_install_dir }}/{{ govc_ver_exe }}'
-govc_link_exe: '{{ govc_install_dir }}/govc'
+govc_archive: govc_{{ govc_ver }}_{{ govc_platform }}.{{ govc_archive_type }}
+govc_tmp_archive: /tmp/{{ govc_archive }}
+govc_url: '{{ govc_mirror }}/{{ govc_ver }}/govc_{{ govc_platform }}.{{ govc_archive_type }}'
+govc_install_dir: '{{ govc_parent_install_dir }}/govc_{{ govc_ver }}_{{ govc_platform }}'
+govc_install_exe: '{{ govc_install_dir }}/govc'
+govc_link_exe: '{{ govc_parent_install_dir }}/bin/govc'
 govc_checksum: '{{ govc_checksums[govc_ver][govc_platform] }}'
