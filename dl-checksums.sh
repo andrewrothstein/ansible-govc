@@ -28,7 +28,6 @@ dl_ver() {
     printf "  # %s\n" $url
     printf "  %s:\n" $ver
 
-    dl $ver $lchecksums Darwin arm64
     dl $ver $lchecksums Darwin x86_64
     dl $ver $lchecksums FreeBSD arm64
     dl $ver $lchecksums FreeBSD armv6
@@ -41,4 +40,4 @@ dl_ver() {
     dl $ver $lchecksums Windows x86_64 zip
 }
 
-dl_ver ${1:-v0.25.0}
+dl_ver ${1:-v0.26.0}
