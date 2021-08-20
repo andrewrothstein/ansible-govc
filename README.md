@@ -1,6 +1,6 @@
 andrewrothstein.govc
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-govc.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-govc)
+![Build Status](https://github.com/andrewrothstein/ansible-govc/actions/workflows/build.yml/badge.svg)
 
 Installs VMwares [govc](https://github.com/vmware/govmomi).
 
