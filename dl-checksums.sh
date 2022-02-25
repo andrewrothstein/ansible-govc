@@ -22,7 +22,7 @@ dl_ver() {
     local lchecksums="$DIR/govc_${ver}_checksums.txt"
     if [ ! -e $lchecksums ];
     then
-        wget -q -O $lchecksums $url
+        curl -sSLf -o $lchecksums $url
     fi
 
     printf "  # %s\n" $url
@@ -40,4 +40,4 @@ dl_ver() {
     dl $ver $lchecksums Windows x86_64 zip
 }
 
-dl_ver ${1:-v0.27.2}
+dl_ver ${1:-v0.27.4}
