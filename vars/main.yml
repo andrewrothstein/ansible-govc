@@ -1,5 +1,7 @@
 ---
 # vars file for govc
+govc_os: '{{ ansible_system }}'
+govc_arch: '{{ govc_arch_map[ansible_architecture] }}'
 govc_platform: '{{ govc_os }}_{{ govc_arch }}'
 govc_archive: govc_{{ govc_ver }}_{{ govc_platform }}.{{ govc_archive_type }}
 govc_tmp_archive: /tmp/{{ govc_archive }}

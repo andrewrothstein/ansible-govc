@@ -33,6 +33,3 @@ galaxy_info:
   galaxy_tags:
     - development
   role_name: govc
-
-dependencies:
-  - andrewrothstein.unarchive-deps

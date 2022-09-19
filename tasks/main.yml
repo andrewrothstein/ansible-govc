@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -10,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: look for installed executable at {{ govc_install_exe }}
-  become: yes
+  become: true
   stat:
     path: '{{ govc_install_exe }}'
   changed_when: False
@@ -18,7 +20,7 @@
 - when: not govc_binary.stat.exists
   block:
     - name: downloading {{ govc_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ govc_url }}'
@@ -26,29 +28,29 @@
         checksum: '{{ govc_checksum }}'
         mode: 0644
     - name: mkdir {{ govc_install_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ govc_install_dir }}'
         state: directory
         mode: 0755
     - name: unarchive {{ govc_tmp_archive }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ govc_tmp_archive }}'
         dest: '{{ govc_install_dir }}'
         creates: '{{ govc_install_exe }}'
   always:
     - name: rm {{ govc_tmp_archive }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ govc_tmp_archive }}'
         state: absent
 - name: linking {{ govc_link_exe }} to {{ govc_install_exe }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ govc_install_exe }}'

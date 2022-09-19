@@ -2,8 +2,8 @@
 # defaults file for govc
 govc_ver: v0.29.0
 govc_mirror: https://github.com/vmware/govmomi/releases/download
-govc_os: Linux
-govc_arch: x86_64
+govc_arch_map:
+  x86_64: x86_64
 govc_archive_type: tar.gz
 govc_parent_install_dir: /usr/local
 govc_checksums:
