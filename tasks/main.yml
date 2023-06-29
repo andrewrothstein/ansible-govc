@@ -15,7 +15,7 @@
   become: true
   stat:
     path: '{{ govc_install_exe }}'
-  changed_when: False
+  changed_when: false
   register: govc_binary
 - when: not govc_binary.stat.exists
   block:
