@@ -30,16 +30,15 @@ dl_ver() {
 
     dl $ver $lchecksums Darwin x86_64
     dl $ver $lchecksums Darwin arm64
-    dl $ver $lchecksums FreeBSD arm64
-    dl $ver $lchecksums FreeBSD armv6
-    dl $ver $lchecksums FreeBSD x86_64
+    dl $ver $lchecksums Freebsd arm64
+    dl $ver $lchecksums Freebsd arm
+    dl $ver $lchecksums Freebsd x86_64
     dl $ver $lchecksums Linux arm64
-    dl $ver $lchecksums Linux armv6
+    dl $ver $lchecksums Linux arm
     dl $ver $lchecksums Linux mips64le
     dl $ver $lchecksums Linux x86_64
-    dl $ver $lchecksums Windows armv6 zip
     dl $ver $lchecksums Windows arm64 zip
     dl $ver $lchecksums Windows x86_64 zip
 }
 
-dl_ver ${1:-v0.30.5}
+dl_ver ${1:-v0.30.7}
