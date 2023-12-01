@@ -26,6 +26,7 @@
         url: '{{ govc_url }}'
         dest: '{{ govc_tmp_archive }}'
         checksum: '{{ govc_checksum }}'
+        timeout: '{{ govc_dl_timeout }}'
         mode: 0644
     - name: mkdir {{ govc_install_dir }}
       become: true
