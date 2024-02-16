@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.govc
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/govc version
-    register: govc_test_output
-  - name: govc version
-    debug:
-      msg: '{{ govc_test_output.stdout }}'
+    - name: Executing 'govc --version'
+      ansible.builtin.command: /usr/local/bin/govc version
+      changed_when: false
+      register: govc_test_output
+    - name: Output of 'govc version'
+      ansible.builtin.debug:
+        msg: '{{ govc_test_output.stdout }}'
