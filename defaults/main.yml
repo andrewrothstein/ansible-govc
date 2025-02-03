@@ -1,6 +1,6 @@
 ---
 # defaults file for govc
-govc_ver: v0.47.1
+govc_ver: v0.48.0
 govc_mirror: https://github.com/vmware/govmomi/releases/download
 govc_dl_timeout: 600
 govc_arch_map:
@@ -848,3 +848,27 @@ govc_checksums:
     Windows_arm64: sha256:cbfa7261c115b7d3e8ed232df04c4c84a128626e87c4ef6654deef294a31787a
     # https://github.com/vmware/govmomi/releases/download/v0.47.1/govc_Windows_x86_64.zip
     Windows_x86_64: sha256:4bf624fcb7ce1893a4685fae00c761942a4caba938513091d57f8bebba74891f
+  # https://github.com/vmware/govmomi/releases/download/v0.48.0/checksums.txt
+  v0.48.0:
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:d942d56e8bb63dab06cd2116bb98e42baa5e58f005311a8b34ff4cc31cc1231c
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:c93434a6d8e1a0a67b4df93f6c5d014bf1adbb5418161777d116670e9c06479a
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Freebsd_arm64.tar.gz
+    Freebsd_arm64: sha256:34ca393a63c8f93e9e811511d04877d9572d8a975401531d74ab608284815868
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Freebsd_arm.tar.gz
+    Freebsd_arm: sha256:537584029c0b0961403fed8653d5ecda33543b289264f1751701466bd3837c78
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Freebsd_x86_64.tar.gz
+    Freebsd_x86_64: sha256:8889f0c8e80a51eb39cbc839217397bac295d0894f5d502cc19cf4e54958987a
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Linux_arm64.tar.gz
+    Linux_arm64: sha256:ea5e37ca8b695410c6f316a78183058572023fde51fb8ac959cc7ef67f6a24e4
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Linux_arm.tar.gz
+    Linux_arm: sha256:84394804829326edc7adc517e7567f09863459264ab05b15bdc382798cb3f464
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Linux_mips64le.tar.gz
+    Linux_mips64le: sha256:3ce0ba1459bab5e32a738d97fa4a17ebf7fe04866e9c487cac1aca9271affa29
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:9fcbcb9ef4f570ed5151700227b98665d91aaa89e6622ffa19f95b2efbd3ba4a
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Windows_arm64.zip
+    Windows_arm64: sha256:3e073d2254154a70d5481514bc8196b81b269a00485bcaea5776ab9af9cace94
+    # https://github.com/vmware/govmomi/releases/download/v0.48.0/govc_Windows_x86_64.zip
+    Windows_x86_64: sha256:466af997509fbc73be0ebfcaed2e4cc401aa315ff329eec8c27b95de0b7d801a
